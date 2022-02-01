@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+
+{% block content %}
+<body>
+{% for new in news %}
+<h1>
+    <center>
+        <p>{{ new.title }}</p>
+
+        <p>{{ new.date_of_pub}}</p>
+        <a href="{{ new.get_absolute_url }}">Link here</a>
+    </center>
+</h1>
+{% endfor %}
+</body>
+{% endblock %}
+
